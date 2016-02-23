@@ -22,8 +22,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 
 io.on('connection', function(socket){
-  socket.on('msg', function(msg){
-    io.emit('msg', msg);
+  socket.on('instance', function(msg){
+    io.emit('instance', msg);
   });
 });
 
